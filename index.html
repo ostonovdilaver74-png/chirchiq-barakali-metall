@@ -142,7 +142,7 @@ nav a {
 
 <body>
 
-<header>
+<header id="banner">
 <img src="logo.png" style="width:250px;">
 
 <h1>CHIRCHIQ BARAKALI METALL</h1>
@@ -300,6 +300,28 @@ Chirchiq Karvon Metall Bozori
 <footer>
 © 2026 CHIRCHIQ BARAKALI METALL
 </footer>
+
+<script>
+const rasmlar = [
+    "plazma.jpg",
+    "listogip.jpg",
+    "gilotina.jpg"
+];
+
+let index = 0;
+const banner = document.getElementById("banner");
+
+function almashtir() {
+    banner.style.backgroundImage =
+        `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${rasmlar[index]}')`;
+
+    index = (index + 1) % rasmlar.length;
+}
+
+almashtir();
+setInterval(almashtir, 3000);
+</script>
+
 
 
 </body>
